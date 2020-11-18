@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Operadores relacionales
+            ==  Igualdad 
+            === Identidad -> 0=="0" da true 0==="0" da falso
+            != Distinto
+            !== Distinto teniendo en cuenta el tipo de dato
+            > Mayor
+            < Menor
+            >= Mayor o igual
+            <= Menor o igual
+
+        */
+        var edad = 22;
+        if(edad >= 18){
+            //si se da la condicion ejecuta este codigo
+            console.log("Es mayor de edad");
+        }else{ // Este bloque se ejecuta cuando la condicion del if es falsa
+            console.log("Es menor de edad");
+        }
+
+        /*
+        Operadores lógicos
+        && "y" logico
+        || "o" logico
+        !  "no" logico
+        */
+
+        var quiereCasarse=false;
+        if(quiereCasarse == true && edad >= 18){
+            console.log("Todo listo");
+        } else  if( quiereCasarse==true && edad < 18){
+            console.log("Necesita autorización");
+        }else{
+            console.log("No quiere casarse, felicitaciones")
+        }
+
+        var i = 0;
+        while(i < 10){
+            console.log("I es "+i);
+            i++;
+        }
+        
+        var j=0;
+        do{
+            console.log("J es "+j);
+            j++
+        }while(j < 10);
+        
+
+    </script>
+</body>
+</html>

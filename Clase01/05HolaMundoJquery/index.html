@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <div id="divUno">Contenido Div Uno</div>
+    <div id="divDos"></div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        // $("SELECTOR CSS").metodo(parametros)
+        /*
+        h1
+        #identificador ("id")
+        .miClase ("class")
+        */
+        $("p").text("Hola Mundo");
+        /*
+        var parrafos = document.getElementsByTagName("p");
+        for(var i = 0; i < parrafos.length; i ++){
+            parrafos[i].innerText = "Hola Mundo";
+        }
+        */
+
+        var aux = $("#divUno").text();
+        $("#divDos").text(aux);
+        // Sin usar variable auxiliar
+        //$("#divDos").text($("#divUno").text());
+    </script>
+</body>
+</html>
