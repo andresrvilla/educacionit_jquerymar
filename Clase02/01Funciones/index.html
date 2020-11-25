@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <div></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var resultadoSuma = sumar(10,30);
+        console.log(resultadoSuma);
+        $("p").text(resultadoSuma);
+
+        var saludo = saludar();
+        $("div").text(saludo);
+
+        terminoElprograma();
+
+        function sumar(numeroUno,numeroDos){
+            var resultado = numeroUno + numeroDos;
+            return resultado; // Si no tiene return, lo llamamos procedimiento
+        }
+
+        function saludar(){
+            return "Hola";
+        }
+
+        function terminoElprograma(){
+            console.log("Fin del programa");
+        }
+    </script>
+</body>
+</html>

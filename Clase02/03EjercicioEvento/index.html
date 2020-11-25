@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+</head>
+<body>
+    <label for="txtNumeroUno">Numero Uno</label><br>
+    <input type="text" id="txtNumeroUno" /><br>
+    +<br>
+    <label for="txtNumeroDos">Numero Dos</label><br>
+    <input type="text" id="txtNumeroDos" /><br>
+    <button id="btnSumar">Sumar</button><br>
+    <span id="spanResultado"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnSumar").click(function(){
+            var valorUno = $("#txtNumeroUno").val();
+            var valorDos = $("#txtNumeroDos").val();
+
+            // parseInt(3123); //convierte a numero entero
+            // parseFloat(3123.5123); //convierte a numero decimal
+
+            $("#spanResultado").text(parseInt(valorUno) + parseInt(valorDos));
+        })
+    </script>
+</body>
+</html>

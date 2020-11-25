@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Hola, <span style="font-weight: bold;">usuario</span>  
+    </p>
+    <label for="txtNombre">Nombre del usuario:</label> <br>
+    <input type="text" id="txtNombre"> <br>
+    <button id="btnSaludo">Saludar</button>
+    <span id="spanResultado"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function saludaEvento(){
+            var nombreUsuario = $("#txtNombre").val();
+            $("#spanResultado").text("Hola "+nombreUsuario);
+        }
+
+        $("#btnSaludo").click(saludaEvento);
+    </script>
+</body>
+</html>

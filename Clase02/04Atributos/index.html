@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="vinculoUno" href="http://www.outlook.com" title="Mail de Microsoft">Ir a Outlook</a><br>
+    <span id="spanUno"></span><br>
+
+    <a id="vinculoDos" href="http://google.com" title="Buscar en Google">Ir a Google</a><br>
+
+    <br>
+    <button id="btnQuitarVinculos">Quitar vinculos</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var leoValor = $("#vinculoUno").attr("href");
+        $("#spanUno").text(leoValor);
+        $("#vinculoUno").attr("href","http://www.gmail.com");
+        $("#vinculoUno").attr("title","Ir a Gmail");
+
+        $("#vinculoDos").attr({
+            "href": "http://www.educacionit.com",
+            "title": "Ir a Educacion IT"
+        });
+
+        $("#btnQuitarVinculos").click(function(){
+            $("a").removeAttr("href");
+        })
+        
+    </script>
+</body>
+</html>

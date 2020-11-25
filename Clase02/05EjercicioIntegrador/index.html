@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+</head>
+<body>
+    <h1>Bienvenidos al curso de Jquery para Diseñadores</h1>
+    <p>¿Sabés cómo hacer que tus elementos cambien sus propiedades de css o atributos a través de un simple click de usuario? ¿Conocés un datepicker, una ventana de diálogo y una barra de progreso amoldada al look and feel de tu sitio Web? ¿Sabías que todo esto y mucho más lo podés hacer con Jquery y JqueryUI? ¡Conocelos!</p>
+    <div>
+        <button id="btnSkinClaro">Claro</button><br>
+        <button id="btnSkinOscuro">Oscuro</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnSkinClaro").mouseover(function(){
+            $("*").attr("style","background-color: white; color: black;");
+        });
+
+        $("#btnSkinOscuro").mouseover(function(){
+            $("*").attr("style","background-color: black; color: white;");
+        })
+    </script>
+</body>
+</html>
