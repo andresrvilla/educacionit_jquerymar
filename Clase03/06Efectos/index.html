@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .standard{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadrado" class="standard"></div><br>
+    <button id="btnOcultar">Ocultar</button><br>
+    <button id="btnMostrar">Mostrar</button><br>
+    <button id="btnMostrarOcultar">Mostrar/Ocultar</button><br><br>
+
+    <button id="btnOcultarTiempo">Ocultar con Tiempo</button><br>
+    <button id="btnMostrarTiempo">Mostrar con Tiempo</button><br>
+    <button id="btnMostrarOcultarTiempo">Mostrar/Ocultar con Tiempo</button><br><br>
+
+
+    <button id="btnCompleto">Mostrar / Ocultar completo</button><br><br>
+
+    <button id="btnOcultarFade">Ocultar (Fade Out)</button><br>
+    <button id="btnMostrarFade">Mostrar (Fade In)</button><br>
+    <button id="btnMostrarOcultarFade">Mostrar / Ocultar (Fade)</button><br><br>
+
+    <button id="btnOcultarSlide">Ocultar (Slide Up)</button><br>
+    <button id="btnMostrarSlide">Mostrar (Slide Down)</button><br>
+    <button id="btnMostrarOcultarSlide">Mostrar / Ocultar (Slide)</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnOcultar").click(function(){
+            $("#cuadrado").hide();    
+        })
+        $("#btnMostrar").click(function(){
+            $("#cuadrado").show();
+        })
+        $("#btnMostrarOcultar").click(function(){
+            $("#cuadrado").toggle();
+        })
+
+        $("#btnOcultarTiempo").click(function(){
+            $("#cuadrado").hide(1000);
+        })
+
+        $("#btnMostrarTiempo").click(function(){
+            $("#cuadrado").show(2000);
+        })
+
+        $("#btnMostrarOcultarTiempo").click(function(){
+            $("#cuadrado").toggle(100);
+        })
+
+        $("#btnCompleto").click(function(){
+            //easing
+            $("#cuadrado").toggle(4000,"linear",function(){
+                $("#btnCompleto").css("background-color","green");
+            });
+        })
+
+        $("#btnOcultarFade").click(function(){
+            $("#cuadrado").fadeOut(2000);
+        })
+        $("#btnMostrarFade").click(function(){
+            $("#cuadrado").fadeIn(2000);
+        })
+        $("#btnMostrarOcultarFade").click(function(){
+            $("#cuadrado").fadeToggle(2000);
+        })
+
+        $("#btnOcultarSlide").click(function(){
+            $("#cuadrado").slideUp(2000);
+        })
+        $("#btnMostrarSlide").click(function(){
+            $("#cuadrado").slideDown(2000);
+        })
+        $("#btnMostrarOcultarSlide").click(function(){
+            $("#cuadrado").slideToggle(2000);
+        })
+    </script>
+</body>
+</html>

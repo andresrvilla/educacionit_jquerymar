@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="cuadrado" style="background-color: grey; width: 200px; height: 200px;"></div><br><br>
+    <p>Este es el texto del parrafo uno</p><br><br>
+    <p>Dos, este es dos</p><br><br>
+    <p>TREEEEEEEEEEESSSSSS</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("p").mouseover(function(){
+            var elTexto = $(this).text();
+            $("#cuadrado").text(elTexto);
+        })
+    </script>
+</body>
+</html>

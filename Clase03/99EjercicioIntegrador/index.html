@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+</head>
+<body>
+    <h1>Sitio de compras</h1>
+    <img src="imagenes/cart.png" /><br>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <span id="spanIphone">
+                        IPhone
+                    </span>
+                </td>
+                <td>
+                    <span id="spanMacBook">
+                        MacBook
+                    </span>
+                </td>
+                <td>
+                    <span id="spanCamara">
+                        Cámara
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#spanIphone").mouseover(function(){
+            $("img").attr("src","imagenes/iphone.jpg");
+        });
+        $("#spanIphone").mouseout(function(){
+            $("img").attr("src","imagenes/cart.png");
+        });
+        
+        // .hover(funcionUno,funcionDos);
+        $("#spanMacBook").hover(
+            //Primer parametro
+            function(){
+                $("img").attr("src","imagenes/macbook.jpg");
+            }
+        ,
+            //Segundo parametro
+            function(){
+                $("img").attr("src","imagenes/cart.png");
+            }
+        )
+
+        $("#spanCamara").mouseover(function(){
+            $("img").attr("src","imagenes/camara.jpg");
+        })
+    </script>
+</body>
+</html>

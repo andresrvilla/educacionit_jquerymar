@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .standard{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        .rojo{
+            background-color: crimson;
+        }
+        .grande{
+            width: 200px;
+            height: 200px;
+        }
+
+        .claseBrillante{
+            width: 150px;
+            height: 150px;
+            background-color: darkorange;
+            border: 5px solid deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadrado" class="standard"></div><br>
+    <div id="cuadrado2" class="standard rojo"></div><br>
+    <div id="cuadrado3" class="standard">Seleccionar Deseleccionar</div>
+    <button id="btnAgregarClaseRojo">Agregar clase rojo</button><br>
+    <button id="btnAgregarDosClases">Agregar clases rojo y grande</button><br>
+    <button id="btnQuitarClases">Quitar clases rojo y grande</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnAgregarClaseRojo").click(function(){
+            $("#cuadrado").addClass("rojo");
+        })
+        $("#btnAgregarDosClases").click(function(){
+            $("#cuadrado").addClass("rojo grande");
+        })
+        $("#btnQuitarClases").click(function(){
+            $("#cuadrado").removeClass("rojo grande");
+        })
+        $("#cuadrado3").click(function(){
+            /*if($(this).hasClass("claseBrillante")){
+                $(this).removeClass("claseBrillante");
+            }else{
+                $(this).addClass("claseBrillante");
+            }*/
+            $(this).toggleClass("claseBrillante");      
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css" />
+</head>
+
+<body>
+    <h1>Sitio de compras</h1>
+    <span id="descripcion"></span><br>
+    <img src="imagenes/cart.png" /><br>
+    <table>
+        <tbody>
+            <tr>
+                <td data-imagen="imagenes/iphone.jpg">
+                    IPhone
+                    <span style="display:none">Telefono Iphone X</span>
+                </td>
+                <td data-imagen="imagenes/macbook.jpg">
+                    MacBook
+                    <span style="display:none">MacBook Air</span>
+                </td>
+                <td data-imagen="imagenes/camara.jpg">
+                    Cámara
+                    <span style="display:none">Nikon 5300</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("td").hover(function () {
+            var imagen = $(this).attr("data-imagen");
+            $("img").attr("src", imagen);
+            var descripcion = $(this).find("span").text();
+            $("#descripcion").text(descripcion);
+        }, function () {
+            $("img").attr("src", "imagenes/cart.png");
+            $("#descripcion").text("");
+        })
+    </script>
+</body>
+
+</html>

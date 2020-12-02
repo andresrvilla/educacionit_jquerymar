@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cuadrado">
+        Datos
+    </div>
+    <button id="btnColorAzul">Cambiar color a azul</button><br>
+    <button id="btnColorRojo">Cambiar color a rojo</button><br>
+    <button id="btnColorVerde">Cambiar color a verde</button><br>
+    <button id="btnTamanoUno">Cambiar a 100px</button><br>
+    <button id="btnTamanoDos">Cambiar a 200px</button><br>
+    <button id="btnTamanoTres">Cambiar a 300px</button><br>
+    <button id="btnLeerColor">Leer Color</button> Color: <span id="spanColor"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnTamanoUno").click(function(){
+            //$("#cuadrado").attr("style","width:100px;height:100px");
+            $("#cuadrado").css("width","100px");
+            $("#cuadrado").css("height","100px");
+        });
+        $("#btnColorAzul").click(function(){
+            //$("#cuadrado").attr("style","background-color:blue;");
+            $("#cuadrado").css("background-color","blue");
+        });
+        $("#btnColorRojo").click(function(){
+            $("#cuadrado").css("background-color","red");
+        })
+        $("#btnColorVerde").click(function(){
+            $("#cuadrado").css("background-color","green");
+        })
+        $("#btnTamanoDos").click(function(){
+            $("#cuadrado").css({
+                "width": "200px",
+                "height": "200px"
+            });
+        });
+        $("#btnTamanoTres").click(function(){
+            $("#cuadrado").css({
+                "width": "300px",
+                "height": "300px"
+            });
+        })
+        $("#btnLeerColor").click(function(){
+            var colorCuadrado = $("#cuadrado").css("background-color");
+            $("#spanColor").text(colorCuadrado);
+        })
+    </script>
+</body>
+</html>

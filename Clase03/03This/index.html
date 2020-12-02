@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cuadrado" style="background-color: grey; width: 100px; height: 100px;"></div>
+    <button id="btnBotonVerde">Green</button><br>
+    <button id="btnBotonAzul">Blue</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("button").click(function(){
+            var elColor = $(this).text();
+            cambiarColor(elColor);
+        })
+
+        function cambiarColor(color){
+            $("#cuadrado").css("background-color",color);
+        }
+    </script>
+</body>
+</html>

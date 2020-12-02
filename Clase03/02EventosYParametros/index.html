@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cuadrado" style="background-color: grey; width: 100px; height: 100px;">
+
+    </div>
+    <button id="btnCambiarAzul">Azul</button><br>
+    <button id="btnCambiarVerde" onclick="cambiarColor('green')">Verde</button><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        
+        $("#btnCambiarAzul").click(function(){
+            cambiarColor("blue");
+        })
+
+        // En el alumni figura como a continuación, pero no es válido
+        //$("#btnCambiarAzul").click = function() { cambiarColor("blue") };
+
+        function cambiarColor(color){
+            $("#cuadrado").css("background-color",color);
+        }
+    </script>
+</body>
+</html>
