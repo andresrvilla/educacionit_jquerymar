@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 100px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        .claseuno{
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+        }
+        .clasedos{
+            width: 300px;
+            height: 300px;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <button id="btnDesplegar">Mostrar/Ocultar</button><br>
+    <button id="btnCambiarClase">Cambiar Clase</button><br>
+    <button id="btnCambiarColor">Cambiar Color</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        //Efectos JQUERYUI
+        // $("SELECTOR").efecto("efectojqui");
+        $("#btnDesplegar").click(function(){
+            //$(".cuadrado").toggle("bounce", { distance: 100, times: 15});
+            $(".cuadrado").toggle("explode", { pieces: 50});
+        })
+
+        $("#btnCambiarClase").click(function(){
+            $(".cuadrado").toggleClass("clasedos",1000);
+        })
+
+        $("#btnCambiarColor").click(function(){
+            $(".cuadrado").animate({
+                "background-color": "#3c3c3c"
+            })
+        })
+    </script>
+</body>
+</html>

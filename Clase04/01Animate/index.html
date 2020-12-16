@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 100px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <button id="btnAgrandarAncho">Agrandar el ancho</button><br>
+    <button id="btnAgrandar">Agrandar</button><br>
+    <button id="btnIrAgrandandando">Ir agrandando</button><br>
+    <button id="btnToggleAnimate">Toggle</button><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnAgrandarAncho").click(function(){
+            $(".cuadrado").animate({
+                "width": "300px"
+            },1000,function(){
+                alert("Termino de animar");
+            });
+        });
+        $("#btnAgrandar").click(function(){
+            $(".cuadrado").animate({
+                "width": "300px",
+                "height": "300px"
+            },1000)
+        })
+
+        $("#btnIrAgrandandando").click(function(){
+            $(".cuadrado").animate({
+                "width": "+=50px",
+                "height": "+=50px"
+            },1000)
+        })
+        $("#btnToggleAnimate").click(function(){
+            $(".cuadrado").animate({
+                "width": "toggle",
+                "height":"toggle"
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="miPrimerDialog" title="Prueba de Dialog">
+        This library depends on jQuery. You must also load jQuery before loading this module. Version 1.8.3 is not hosted due to its short life, and the alias 1.8.3 actually loads 1.8.4.
+    </div>
+    <button id="btnMostrarDialogo">Mostrar</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $("#miPrimerDialog").dialog({
+            "autoOpen": false,
+            "modal": true,
+            "resizable": false,
+            "show": {
+                "effect": "blind"
+            }
+        });
+
+        $("#btnMostrarDialogo").button();
+        $("#btnMostrarDialogo").click(function(){
+            $("#miPrimerDialog").dialog("open");
+        })
+    </script>
+</body>
+</html>
